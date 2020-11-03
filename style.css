@@ -1,0 +1,296 @@
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabicui.css);
+
+:root {
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: Lato;
+}
+
+.container-en {
+  /* display:none ; */
+  width: 350px;
+  margin: auto;
+}
+
+.title {
+  display:flex;
+  justify-content: space-between;
+}
+
+/* Main Title */
+h2 {
+  margin-bottom: 30px;
+}
+
+.language-selector {
+  margin-top: 25px;
+  align-self: flex-start;
+  background-color:transparent;
+  display:flex;
+}
+
+.language-selector input {
+  position: absolute;
+  width: 1px;
+  clip-path: polygon(100% 100%);
+}
+
+/* UNCHECKED */
+.language-selector label {
+  color:#BDBDBD;
+  font-weight: bold;
+  height:1.5rem;
+  width:2.5rem;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.05em solid #E9E9E9;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+/* Move arabic letter up a bit */
+ .language-selector label:last-of-type{
+  padding-bottom: 0.3rem;
+}
+
+/* CHECKED */
+.language-selector input:checked + label {
+  background-color:white;
+  border:  0.1em solid #E9E9E9;
+  color:#2091F9;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.income-expense {
+  background-color: white;
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  box-shadow: var(--box-shadow);
+}
+
+.income {
+  /* background-color: darkkhaki; */
+  flex: 1;
+  border-right: 1px solid #dedede;
+}
+.income p {
+  color: #2ecc71;
+  letter-spacing: 1px;
+}
+
+.income-expense p {
+  margin: 0px;
+  margin: 5px 0;
+}
+
+.expense {
+  /* background-color: darkolivegreen; */
+  flex: 1;
+}
+
+.expense p {
+  color: #c0392b;
+  letter-spacing: 1px;
+}
+
+h3 {
+  border-bottom: 1px solid #8b8b8b;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+li {
+  list-style: none;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.container-en li:hover:before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f2ed';
+  left: -40px;
+  bottom: -3px;
+  color: red;
+  /* background-color: darkorange; */
+  width: 50px;
+  height: 120%;
+  position: absolute;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus {
+  border-right: 5px solid #c0392b;
+  border-radius: 3px;
+}
+
+.minus {
+  border-right: 5px solid #2ecc71;
+  border-radius: 3px;
+}
+
+span {
+  /* background:red; */
+  position: absolute;
+  right: 10px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px;
+  /* margin:30px; */
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+input[type=text] {
+    margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 50px;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #9c88ff;
+  color: white;
+  border: none;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+/* ################### Arabic Version #########################*/
+
+.container-ar {
+  display:none ;
+  width: 350px;
+  margin: auto;
+  font-family: 'Tajawal', sans-serif;
+  /* font-family: 'Noto Naskh Arabic UI', serif; */
+  direction: rtl;
+}
+
+.container-ar h2 {
+  /* background:red */
+  font-size: 28px;
+}
+
+.container-ar .language-selector {
+  font-family: Lato;
+  direction: ltr;
+}
+
+
+.container-ar h4 {
+  /* background:red */
+  font-size: 18px;
+  /* font-weight: 400; */
+}
+
+.container-ar h1 {
+  /* background:red */
+  /* font-size: 18px;; */
+  font-family: Lato;
+}
+
+.container-ar .income {
+  border-left: 1px solid #dedede;
+  border-right: none;
+}
+
+.container-ar .income-expense p {
+  font-family: Lato;
+}
+
+.container-ar span {
+  /* background:red; */
+  position: absolute;
+  left: 15px;
+  text-align:left;
+  direction:ltr;
+  font-family: Lato;
+}
+
+
+  
+ .container-ar li:hover:after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f2ed';
+    right: -40px;
+    bottom: -3px;
+    color: red;
+    /* background-color: darkorange; */
+    width: 50px;
+    height: 120%;
+    position: absolute;
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-ar .plus {
+    border-left: 5px solid #c0392b;
+    border-right:none;
+    border-radius: 3px;
+  }
+  
+  .container-ar .minus {
+    border-left: 5px solid #2ecc71;
+    border-right: none;
+    border-radius: 3px;
+  }
+
+.container-ar button {
+    font-size: 20px;
+    padding:5px
+}
+
+
+
+/* 
+<h1> 	32px
+<h2> 	24px
+<h3> 	19px
+<h4> 	16px */

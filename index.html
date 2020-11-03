@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="container-en" id="container-en">
+      <div class="title">
+        <h2>Expense Tracker</h2>
+        <div class="language-selector">
+          <input type="radio" id="radio-en" name="radio-en" value="en" checked
+          />
+            <label for="radio-en" onclick="toogleLanguage('en')">En</label>
+            <input type="radio" id="radio-ar" name="radio-en" value="ar"/>
+            <label for="radio-ar" onclick="toogleLanguage('ar')">ع</label>
+        </div>     
+      </div>
+      <h4>Your Balance</h4>
+      <h1>$420.00</h1>
+      
+      <div class="income-expense">
+        <div class="income">
+          <h4>Income</h4>
+          <p id='income-en'>$450.00</p>
+        </div>
+        <div class="expense">
+          <h4>Expense</h4>
+          <p id='expense-en'>$30</p>
+        </div>
+      </div>
+      <div class="history">
+          <h3>History</h3>
+          <ul id='list'>
+              <li class="plus">Flower <span>-$20</span></li>
+              <li class="minus">Salary <span>$300</span></li>
+              <li class="plus">Book   <span>-$10</span></li>
+              <li class="minus">Camera <span>$150</span></li>
+          </ul>
+      </div>
+      <div class="new-transaction">
+          <h3>Add New Transaction</h3>
+          <label for="text">Text</label>
+          <input type="text" id='text' placeholder="Enter text...">
+          <label for="amount">Amount (negative - expense, positive - income)</label>
+          <input type="number" id='amount' placeholder="0">
+          <button class='btn'>Add Transaction</button>
+      </div>
+    </div>
+
+    <!-- Arabic Version -->
+    <div class="container-ar" id="container-ar">
+      <div class="title">
+        <h2>تعقب المصاريف</h2>
+        <div class="language-selector">
+          <input type="radio" id="radio2-en" name="radio2"  />
+            <label for="radio2-en" onclick="toogleLanguage('en')">En</label>
+            <input type="radio" id="radio2-ar" name="radio2" checked/>
+            <label for="radio2-ar" onclick="toogleLanguage('ar')">ع</label>
+        </div>
+      </div>
+      <h4>رصيدك</h4>
+      <h1>$420.00</h1>
+      <div class="income-expense">
+        <div class="income">
+          <h4>الإيرادات</h4>
+          <p id='income-ar'>$450.00</p>
+        </div>
+        <div class="expense">
+          <h4>مصروف</h4>
+          <p id='expense-ar'>$30</p>
+        </div>
+      </div>
+      <div class="history">
+          <h3>السجل</h3>
+          <ul>
+              <li class="plus">زهرة <span>-$20</span></li>
+              <li class="minus">راتب <span>$300</span></li>
+              <li class="plus">كتاب   <span>-$10</span></li>
+              <li class="minus">آلة تصوير <span>$150</span></li>
+          </ul>
+      </div>
+      <div class="new-transaction">
+          <h3>أضف معاملة جديدة</h3>
+          <label for="text-ar">نص</label>
+          <input type="text" id='text-ar' placeholder="أدخل النص...">
+          <label for="amount-ar" >كمية
+            (سلبي - حساب ، إيجابي - دخل)</label>
+          <input type="number" id='amount-ar' placeholder="0">
+          <button class='btn' type="submit">أضف معاملة</button>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+
+  </body>
+</html>
+
