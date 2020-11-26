@@ -131,6 +131,17 @@ ul {
   position: relative;
 }
 
+.container-en li:hover > :last-child{
+  color:red;
+  opacity:1;
+}
+
+.container-ar li:hover > :last-child{
+  color:red; 
+  opacity:1;
+}
+
+
 li {
   list-style: none;
   background-color: white;
@@ -140,36 +151,20 @@ li {
   position: relative;
 }
 
-.container-en li:hover:before {
-  font-family: 'Font Awesome 5 Free';
-  content: '\f2ed';
-  left: -40px;
-  bottom: -3px;
-  color: red;
-  /* background-color: darkorange; */
-  width: 50px;
-  height: 120%;
-  position: absolute;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .plus {
-  border-right: 5px solid #c0392b;
+  border-right: 5px solid #2ecc71;
   border-radius: 3px;
 }
 
 .minus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid #c0392b;
   border-radius: 3px;
 }
 
 span {
   /* background:red; */
   position: absolute;
+  /* position: relative; */
   right: 10px;
 }
 
@@ -243,41 +238,25 @@ button {
 }
 
 .container-ar span {
-  /* background:red; */
   position: absolute;
   left: 15px;
   text-align:left;
-  direction:ltr;
   font-family: Lato;
+  direction:ltr;
 }
 
 
-  
- .container-ar li:hover:after {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f2ed';
-    right: -40px;
-    bottom: -3px;
-    color: red;
-    /* background-color: darkorange; */
-    width: 50px;
-    height: 120%;
-    position: absolute;
-    cursor: pointer;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
 
   .container-ar .plus {
-    border-left: 5px solid #c0392b;
+    border-left: 5px solid #2ecc71;
+
     border-right:none;
     border-radius: 3px;
   }
   
   .container-ar .minus {
-    border-left: 5px solid #2ecc71;
+    border-left: 5px solid #c0392b;
     border-right: none;
     border-radius: 3px;
   }
@@ -287,10 +266,105 @@ button {
     padding:5px
 }
 
+.container-ar ul li {
+  /* background: red; */
+}
 
 
+
+
+#list-ar  {
+  /* direction: ltr; */
+  font-family: Lato;
+
+}
+
+.container-en span:last-child{
+  position: absolute;
+  left:-50px;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f2ed';
+  color: #f7f7f7;
+  cursor:pointer;
+  height:50px;
+  width:40px;
+  display:flex;
+  justify-content: end;
+  align-items:center;
+  bottom:-3px;
+  opacity:0;
+  
+}
+
+.container-ar span:last-child{
+  position: absolute;
+  right:-25px;
+  font-family: 'Font Awesome 5 Free';
+  color:red;
+  cursor: pointer;
+  /* background-color: blue; */
+  height:50px;
+  width:40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  bottom:-3px;
+  opacity:0;
+  
+}
+
+
+.container-en span:last-child:hover{
+  position: absolute;
+  left:-25px;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f2ed';
+  color:red;
+  cursor: pointer;
+  /* background-color: blue; */
+  height:50px;
+  width:40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  bottom:-3px;
+  opacity:1;
+}
+
+.container-ar span:last-child:hover{
+  position: absolute;
+  /* right:-25px; */
+  font-family: 'Font Awesome 5 Free';
+  color:red;
+  cursor: pointer;
+  /* background-color: blue; */
+  height:50px;
+  width:40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  bottom:-3px;
+  opacity:1;
+}
 /* 
 <h1> 	32px
 <h2> 	24px
 <h3> 	19px
 <h4> 	16px */
+
+/**
+.container-ar li:hover:after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f2ed';
+    right: -40px;
+    bottom: -3px;
+    color: red;
+    width: 50px;
+    height: 120%;
+    position: absolute;
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /* } */
