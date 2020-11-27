@@ -1,0 +1,1 @@
+A simple vanilla JS expense tracker with English and Arabic support
