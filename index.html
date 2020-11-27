@@ -19,9 +19,9 @@
         <div class="language-selector">
           <input type="radio" id="radio-en" name="radio-en" value="en" checked
           />
-            <label for="radio-en" onclick="toogleLanguage('en')">En</label>
+            <label for="radio-en" onclick="toggleLanguage('en')">En</label>
             <input type="radio" id="radio-ar" name="radio-en" value="ar"/>
-            <label for="radio-ar" onclick="toogleLanguage('ar')">ع</label>
+            <label for="radio-ar" onclick="toggleLanguage('ar')">ع</label>
         </div>     
       </div>
       <h4>Your Balance</h4>
@@ -47,7 +47,7 @@
             <label for="text">Text</label>
             <input type="text" id='text' placeholder="Enter text...">
             <label for="amount">Amount (negative - expense, positive - income)</label>
-            <input type="text" id='amount'placeholder="0">
+            <input type="text" id='amount' placeholder="0">
             <button class='btn' id='button-en' data-error="Please add text and value">Add Transaction</button>
             <article class='error'>Please enter text and value</article>
       </div>
@@ -59,9 +59,9 @@
         <h2>تعقب المصاريف</h2>
         <div class="language-selector">
           <input type="radio" id="radio2-en" name="radio2"  />
-            <label for="radio2-en" onclick="toogleLanguage('en')">En</label>
+            <label for="radio2-en" onclick="toggleLanguage('en')">En</label>
             <input type="radio" id="radio2-ar" name="radio2" checked/>
-            <label for="radio2-ar" onclick="toogleLanguage('ar')">ع</label>
+            <label for="radio2-ar" onclick="toggleLanguage('ar')">ع</label>
         </div>
       </div>
       <h4>رصيدك</h4>
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 
   </body>
 </html>

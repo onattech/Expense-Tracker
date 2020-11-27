@@ -101,7 +101,7 @@ function populator() {
   })
 }
 
-function toogleLanguage(e) {
+function toggleLanguage(e) {
   if (e === 'ar') {
     document.getElementById('container-ar').style.display = 'block'
     document.getElementById('container-en').style.display = 'none'
