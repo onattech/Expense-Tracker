@@ -10,17 +10,20 @@ const number = document.querySelector('#amount')
 const buttons = document.querySelectorAll('button')
 const balanceElEn = document.getElementsByTagName('h1')[0]
 const balanceElAr = document.getElementsByTagName('h1')[1]
+const errors = document.querySelectorAll('.error')
+errors[0].style.opacity = 0 //?
 
-let itemList = [
-  ['Flower', -20, 1],
-  ['Salary', 300, 2],
-  ['Book',   -10, 3],
-  ['Camera', 150, 4],
-]
+// let itemList = [
+//   ['Flower', -20, 1],
+//   ['Salary', 300, 2],
+//   ['Book',   -10, 3],
+//   ['Camera', 150, 4],
+// ]
+let itemList = JSON.parse(localStorage.getItem(('list'))) || []
 
-let balance = itemList.reduce((a, b) => a + b[1], 0)
-let income = itemList.filter((a) => a[1] > 0).reduce((a, b) => a + b[1], 0)
-let expense = itemList.filter((a) => a[1] < 0).reduce((a, b) => a + b[1], 0)
+let balance =  itemList.reduce((a, b) => a + Number(b[1]), 0)
+let income =  itemList.filter((a) => a[1] > 0).reduce((a, b) => a + Number(b[1]), 0)
+let expense =  itemList.filter((a) => a[1] < 0).reduce((a, b) => a + Number(b[1]), 0)
 
 // Set balance
 setBalance()
@@ -47,7 +50,7 @@ function setExpense(e=0) {
 }
 
 // Populate lists
-populator()
+itemList && populator()
 
 // Delete item
 document.addEventListener('click', (e) => {
@@ -65,19 +68,29 @@ document.addEventListener('click', (e) => {
     let dataId = delButton.parentElement.getAttribute('data-id')
     let toberemoved = document.querySelectorAll(`[data-id="${dataId}"]`)
     toberemoved.forEach((a) => a.remove())
+    itemList = itemList.filter(entry=>entry[2] != dataId)//?
+    localStorage.setItem('list', JSON.stringify(itemList))
+
   }
 })
 
 // Add item
 buttons.forEach((el) => {
-  el.addEventListener('click', () => {
+  el.addEventListener('click', (e) => {
     const id = new Date().getTime().toString()
     const textValue = el.previousElementSibling.previousElementSibling.previousElementSibling.value
     const cost = el.previousElementSibling.value
-    itemList.push([textValue, cost, id])
-    newListItem(textValue, cost, id)
-    setBalance(cost)
-    cost > 0 ? setIncome(cost) : setExpense(cost)
+    if (textValue && cost.match(/^-?[0-9]+$/)){
+      itemList.push([textValue, cost, id])
+      newListItem(textValue, cost, id)
+      setBalance(cost)
+      cost > 0 ? setIncome(cost) : setExpense(cost)
+      localStorage.setItem('list', JSON.stringify(itemList))
+      errors.forEach(a=>a.style.opacity = 0)
+    } else {
+      errors.forEach(a=>a.style.opacity = 1)
+    }
+
   })
 })
 
@@ -128,3 +141,5 @@ function newListItem(name, amount, id) {
   addToEachList(list_ar)
 }
 
+// localStorage.setItem('list', JSON.stringify(itemList))
+// JSON.parse(localStorage.getItem(('list')))//?

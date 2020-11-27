@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon " sizes="128x128" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"> 
@@ -41,11 +44,12 @@
       </div>
       <div class="new-transaction">
           <h3>Add New Transaction</h3>
-          <label for="text">Text</label>
-          <input type="text" id='text' placeholder="Enter text...">
-          <label for="amount">Amount (negative - expense, positive - income)</label>
-          <input type="number" id='amount' placeholder="0">
-          <button class='btn' id='button-en'>Add Transaction</button>
+            <label for="text">Text</label>
+            <input type="text" id='text' placeholder="Enter text...">
+            <label for="amount">Amount (negative - expense, positive - income)</label>
+            <input type="text" id='amount'placeholder="0">
+            <button class='btn' id='button-en' data-error="Please add text and value">Add Transaction</button>
+            <article class='error'>Please enter text and value</article>
       </div>
     </div>
 
@@ -84,7 +88,9 @@
           <label for="amount-ar" >كمية
             (سلبي - حساب ، إيجابي - دخل)</label>
           <input type="number" id='amount-ar' placeholder="0">
-          <button class='btn' type="submit" id='button-ar'>أضف معاملة</button>
+          <button class='btn' type="submit" id='button-ar'> أضف معاملة </button>
+          <article class='error'>الرجاء إضافة نص وقيمة</article>
+
       </div>
     </div>
 

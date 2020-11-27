@@ -184,7 +184,6 @@ input[type=text] {
 
 button {
   width: 100%;
-  margin-bottom: 50px;
   font-size: 1rem;
   padding: 10px;
   background-color: #9c88ff;
@@ -368,3 +367,37 @@ button {
     justify-content: center;
     align-items: center;
   /* } */
+
+#list-ar li  {
+    font-family: 'Noto Naskh Arabic UI', serif;
+    font-size: 1.2rem;
+}
+
+
+
+button {
+  position: relative;
+}
+
+button::after {
+  position: absolute;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  background-color: #333;
+  color:white;
+  content: attr(data-error);
+  width:max-content;
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:5px;
+  visibility: hidden;
+}
+
+.error {
+  margin: 10px 0;
+  color: red;
+  opacity: 0;
+}
