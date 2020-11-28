@@ -2,6 +2,12 @@
 document.getElementById('radio-en').checked = true
 document.getElementById('radio-ar').checked = false
 
+// Check for an Arabic Region
+const getLanguage = () => navigator.userLanguage || (navigator.languages && navigator.languages.length && navigator.languages[0]) || navigator.language || navigator.browserLanguage || navigator.systemLanguage || 'en';
+if (getLanguage().match(/ar/i)){
+  toggleLanguage('ar')
+}
+
 // Elements
 let list = document.querySelector('#list')
 let list_ar = document.querySelector('#list-ar')
@@ -143,3 +149,5 @@ function newListItem(name, amount, id) {
 
 // localStorage.setItem('list', JSON.stringify(itemList))
 // JSON.parse(localStorage.getItem(('list')))//?
+
+
