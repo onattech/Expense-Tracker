@@ -3,53 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <link rel="shortcut icon " sizes="128x128" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon " sizes="128x128" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <title>Expense Tracker</title>
   </head>
+  <a href="https://github.com/lokutech/Expense-Tracker">
+    <img src="GithubLogo.png" alt=""></a>
   <body>
     <div class="container-en" id="container-en">
       <div class="title">
         <h2>Expense Tracker</h2>
         <div class="language-selector">
-          <input type="radio" id="radio-en" name="radio-en" value="en" checked
+          <input
+            type="radio"
+            id="radio-en"
+            name="radio-en"
+            value="en"
+            checked
           />
-            <label for="radio-en" onclick="toggleLanguage('en')">En</label>
-            <input type="radio" id="radio-ar" name="radio-en" value="ar"/>
-            <label for="radio-ar" onclick="toggleLanguage('ar')">ع</label>
-        </div>     
+          <label for="radio-en" onclick="toggleLanguage('en')">En</label>
+          <input type="radio" id="radio-ar" name="radio-en" value="ar" />
+          <label for="radio-ar" onclick="toggleLanguage('ar')">ع</label>
+        </div>
       </div>
       <h4>Your Balance</h4>
       <h1>$0.00</h1>
-      
+
       <div class="income-expense">
         <div class="income">
           <h4>Income</h4>
-          <p id='income-en'>$0.00</p>
+          <p id="income-en">$0.00</p>
         </div>
         <div class="expense">
           <h4>Expense</h4>
-          <p id='expense-en'>$0</p>
+          <p id="expense-en">$0</p>
         </div>
       </div>
       <div class="history">
-          <h3>History</h3>
-          <ul id='list'>
-          </ul>
+        <h3>History</h3>
+        <ul id="list"></ul>
       </div>
       <div class="new-transaction">
-          <h3>Add New Transaction</h3>
-            <label for="text">Text</label>
-            <input type="text" id='text' placeholder="Enter text...">
-            <label for="amount">Amount (negative - expense, positive - income)</label>
-            <input type="text" id='amount' placeholder="0">
-            <button class='btn' id='button-en' data-error="Please add text and value">Add Transaction</button>
-            <article class='error'>Please enter text and value</article>
+        <h3>Add New Transaction</h3>
+        <label for="text">Text</label>
+        <input type="text" id="text" placeholder="Enter text..." />
+        <label for="amount"
+          >Amount (negative - expense, positive - income)</label
+        >
+        <input type="text" id="amount" placeholder="0" />
+        <button
+          class="btn"
+          id="button-en"
+          data-error="Please add text and value"
+        >
+          Add Transaction
+        </button>
+        <article class="error">Please enter text and value</article>
       </div>
     </div>
 
@@ -58,10 +83,10 @@
       <div class="title">
         <h2>تعقب المصاريف</h2>
         <div class="language-selector">
-          <input type="radio" id="radio2-en" name="radio2"  />
-            <label for="radio2-en" onclick="toggleLanguage('en')">En</label>
-            <input type="radio" id="radio2-ar" name="radio2" checked/>
-            <label for="radio2-ar" onclick="toggleLanguage('ar')">ع</label>
+          <input type="radio" id="radio2-en" name="radio2" />
+          <label for="radio2-en" onclick="toggleLanguage('en')">En</label>
+          <input type="radio" id="radio2-ar" name="radio2" checked />
+          <label for="radio2-ar" onclick="toggleLanguage('ar')">ع</label>
         </div>
       </div>
       <h4>رصيدك</h4>
@@ -69,33 +94,28 @@
       <div class="income-expense">
         <div class="income">
           <h4>الإيرادات</h4>
-          <p id='income-ar'>$450.00</p>
+          <p id="income-ar">$450.00</p>
         </div>
         <div class="expense">
           <h4>مصروف</h4>
-          <p id='expense-ar'>$30</p>
+          <p id="expense-ar">$30</p>
         </div>
       </div>
       <div class="history">
-          <h3>السجل</h3>
-          <ul id='list-ar'>
-          </ul>
+        <h3>السجل</h3>
+        <ul id="list-ar"></ul>
       </div>
       <div class="new-transaction">
-          <h3>أضف معاملة جديدة</h3>
-          <label for="text-ar">نص</label>
-          <input type="text" id='text-ar' placeholder="أدخل النص...">
-          <label for="amount-ar" >كمية
-            (سلبي - حساب ، إيجابي - دخل)</label>
-          <input type="number" id='amount-ar' placeholder="0">
-          <button class='btn' type="submit" id='button-ar'> أضف معاملة </button>
-          <article class='error'>الرجاء إضافة نص وقيمة</article>
-
+        <h3>أضف معاملة جديدة</h3>
+        <label for="text-ar">نص</label>
+        <input type="text" id="text-ar" placeholder="أدخل النص..." />
+        <label for="amount-ar">كمية (سلبي - حساب ، إيجابي - دخل)</label>
+        <input type="number" id="amount-ar" placeholder="0" />
+        <button class="btn" type="submit" id="button-ar">أضف معاملة</button>
+        <article class="error">الرجاء إضافة نص وقيمة</article>
       </div>
     </div>
 
     <script src="script.js"></script>
-
   </body>
 </html>
-

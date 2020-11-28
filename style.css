@@ -401,3 +401,11 @@ button::after {
   color: red;
   opacity: 0;
 }
+
+
+img {
+  position: absolute;
+  width:8%;
+  right:0px;
+  top: 20px;
+}
