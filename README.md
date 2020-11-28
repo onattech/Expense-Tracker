@@ -7,7 +7,7 @@
 <a href="https://github.com/lokutech/Expense-Tracker/blob/main/style.css">
   <img src="https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white"  height="22">
 </a> 
-<a href="https://developer.mozilla.org/en-US/docs/Web/javascript">
+<a href="https://github.com/lokutech/Expense-Tracker/blob/main/script.js">
   <img src="https://img.shields.io/badge/Vanilla-v6+-grey?logo=javascript&labelColor=F7DF1E&logoColor=black"  height="22">
 </a> 
 
