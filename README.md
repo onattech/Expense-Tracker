@@ -11,6 +11,12 @@
   <img src="https://img.shields.io/badge/Vanilla-v6+-grey?logo=javascript&labelColor=F7DF1E&logoColor=black"  height="22">
 </a> 
 
+<a href="https://www.figma.com/file/RxCmzE2b20cYWOXKjlNtE1/Expense-Tracker?node-id=0%3A1">
+  <img src="https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white"  height="22">
+</a> 
+
+
+
 ## Expense Tracker
 
 I have recoded Brad Traversy's Expense Tracker available [here](https://github.com/bradtraversy/vanillawebprojects/tree/master/expense-tracker) from scratch with no innerHTML but innerText instead and added Arabic language support.
