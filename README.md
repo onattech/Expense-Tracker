@@ -19,7 +19,7 @@
 
 ## Expense Tracker
 
-I have recoded Brad Traversy's Expense Tracker available [here](https://github.com/bradtraversy/vanillawebprojects/tree/master/expense-tracker) from scratch with no innerHTML but innerText instead and added Arabic language support.
+I have recoded Brad Traversy's Expense Tracker available [here](https://github.com/bradtraversy/vanillawebprojects/tree/master/expense-tracker) from scratch with no innerHTML but innerText instead and added Arabic language support. Figma design files are also included above.
 
 
 
