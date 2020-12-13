@@ -147,7 +147,3 @@ function newListItem(name, amount, id) {
   addToEachList(list_ar)
 }
 
-// localStorage.setItem('list', JSON.stringify(itemList))
-// JSON.parse(localStorage.getItem(('list')))//?
-
-

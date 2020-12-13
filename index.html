@@ -63,17 +63,32 @@
         <h3>Add New Transaction</h3>
         <label for="text">Text</label>
         <input type="text" id="text" placeholder="Enter text..." />
-        <label for="amount"
-          >Amount (negative - expense, positive - income)</label
+        <label for="amount">
+          <!-- Amount (negative - expense, positive - income)</label -->
+          Amount</label
         >
         <input type="text" id="amount" placeholder="0" />
-        <button
+        <!-- <button
           class="btn"
           id="button-en"
           data-error="Please add text and value"
         >
           Add Transaction
-        </button>
+        </button> -->
+        <button
+        class="btn inc-exp"
+        id="button-en-inc"
+        data-error="Please add text and value"
+      >
+        Income
+      </button>
+      <button
+      class="btn inc-exp"
+      id="button-en-exp"
+      data-error="Please add text and value"
+    >
+      Expense
+    </button>
         <article class="error">Please enter text and value</article>
       </div>
     </div>

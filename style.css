@@ -265,12 +265,6 @@ button {
     padding:5px
 }
 
-.container-ar ul li {
-  /* background: red; */
-}
-
-
-
 
 #list-ar  {
   /* direction: ltr; */
@@ -408,4 +402,17 @@ img {
   width:8%;
   right:0px;
   top: 20px;
+}
+
+.inc-exp {
+  width:49.5%;
+}
+
+#button-en-exp {
+  float: right;
+  background-color: #c0392b;
+}
+
+#button-en-inc {
+  background-color: #2ecc71;
 }
